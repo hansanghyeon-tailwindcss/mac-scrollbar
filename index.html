@@ -75,11 +75,13 @@
     .awesome-scrollbar::-webkit-scrollbar-thumb {
       background: rgba(0,0,0,.2); 
     }
+    /* 여기에는 문제가있다 가로스크롤일때는 애니메이션이 의도적으로 동작하지 않는다. */
+    /* MAGIC HAPPENS HERE */
     .awesome-scrollbar::after {
       content: '';
       position: absolute;
-      background: #fff;;
-      height: 100%;  
+      background: #fff;
+      height: 100%;
       top: 0;
       right: 0;
       width: .4em;
@@ -87,7 +89,6 @@
       transition: all .5s;
       opacity: 1;
     }
-    /* MAGIC HAPPENS HERE */
     .awesome-scrollbar:hover::after {
        opacity: 0;
       -webkit-transition: all .5s;
