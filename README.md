@@ -1,4 +1,4 @@
-# ios-scroll-bar
+# mac-scroll-bar
 
 참고 
 

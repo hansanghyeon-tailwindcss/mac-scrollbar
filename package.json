@@ -1,0 +1,22 @@
+{
+  "name": "@ui-snippet/mac-scroll-bar",
+  "version": "1.0.0",
+  "repository": "git@github.com:ui-snippet/mac-scroll-bar.git",
+  "author": "Hansanghyeon <999@hyeon.pro>",
+  "license": "MIT",
+  "description": "A Tailwind CSS plugin for creating beautiful scroll bar",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0 || insiders"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
