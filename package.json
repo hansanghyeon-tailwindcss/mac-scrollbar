@@ -1,7 +1,7 @@
 {
-  "name": "@ui-snippet/mac-scrollbar",
+  "name": "@hyeon/mac-scrollbar",
   "version": "1.0.2",
-  "repository": "https://github.com/ui-snippet/mac-scrollbar",
+  "repository": "https://github.com/Hansanghyeon/mac-scrollbar",
   "author": "Hansanghyeon <999@hyeon.pro>",
   "license": "MIT",
   "description": "A Tailwind CSS plugin for creating beautiful scroll bar",
