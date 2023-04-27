@@ -1,7 +1,43 @@
 const plugin = require("tailwindcss/plugin")
 
 module.exports = plugin(
-	({ addComponents }) => {
+	({ addComponents, addBase }) => {
+    // 베이스스타일로 추가하기
+    addBase({
+      ':root': {
+        // 스크롤바 배경색은 없는 것으로 추가하기
+        // '--tw-mac-scrollbar-bg': '255, 255, 255',
+        '--tw-mac-scrollbar-text': '12,12,12',
+        '--tw-mac-scrollbar-size-w': '6.4px',
+        '--tw-mac-scrollbar-size-h': '6.4px',
+      },
+      '*': {
+        // 이 속성은 넣어야하는지 넣지 말아야하는지 고민중
+        boxSizing: 'border-box',
+        '&::-webkit-scrollbar': {
+          backgroundColor: 'transparent',
+          width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
+          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
+        },
+        '&::-webkit-scrollbar-track': {
+          backgroundColor: 'rgba(var(--tw-mac-scrollbar-bg), 0.6)',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(var(--tw-mac-scrollbar-text), 0.6)',
+          borderRadius: '999px'
+        }
+      },
+      '@media (prefers-color-scheme: dark)': {
+        ':root': {
+          // '--tw-mac-scrollbar-bg': '255, 255, 255',
+          '--tw-mac-scrollbar-text': '173, 186, 199',
+        },
+      },
+    })
+
+    // TODO:
+    // mac-scrollbar-[color]
+    // 추가할수있게 변경하기
     addComponents({
       '.mac-scrollbar': {
         '&::-webkit-scrollbar': {
@@ -79,8 +115,7 @@ module.exports = plugin(
           transition: 'all .5s',
         }
       },
-
-      '.scrollbar-hide': {
+      '.scrollbar-hidden': {
         // /* For IE, Edge and Firefox */
         '-ms-overflow-style': 'none',
         'scrollbar-width': 'none',
