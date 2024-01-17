@@ -20,7 +20,9 @@ npm install -D @hyeon/mac-scrollbar
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  plugins: [require('@hyeon/mac-scrollbar')],
+  plugins: [
+    require('@hyeon/mac-scrollbar')
+  ],
 }
 ```
 
