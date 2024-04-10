@@ -1,7 +1,7 @@
 {
-  "name": "@hyeon/mac-scrollbar",
-  "version": "1.0.2",
-  "repository": "https://github.com/Hansanghyeon/mac-scrollbar",
+  "name": "tailwindcss-mac-scrollbar",
+  "version": "1.0.4",
+  "repository": "https://github.com/Hansanghyeon/tailwindcss-mac-scrollbar",
   "author": "Hansanghyeon <999@hyeon.pro>",
   "license": "MIT",
   "description": "A Tailwind CSS plugin for creating beautiful scroll bar",
