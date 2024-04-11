@@ -30,6 +30,12 @@ module.exports = {
 <div class="mac-scrollbar mac-scrollbar-x mac-scrollbar-y scrollbar-hidden">test</div>
 ```
 
+## 스크롤바 사이즈 변경
+
+```html
+<div class="[--tw-mac-scrollbar-size-w:6px]">가로</div>
+<div class="[--tw-mac-scrollbar-size-h:6px]">세로</div>
+```
 <!--
 ## 제작하면서 참고
 
