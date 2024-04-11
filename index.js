@@ -41,8 +41,8 @@ module.exports = plugin(
     addComponents({
       '.mac-scrollbar': {
         '&::-webkit-scrollbar': {
-          width: '6.4px',
-          height: '6.4px'
+          width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
+          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
         },
         '&::-webkit-scrollbar, &::-webkit-scrollbar-thumb': {
           overflow: 'visible',
@@ -57,8 +57,8 @@ module.exports = plugin(
         position: 'relative',
         overflowY: 'scroll',
         '&::-webkit-scrollbar': {
-          width: '6.4px',
-          height: '6.4px'
+          width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
+          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
         },
         '&::-webkit-scrollbar, &::-webkit-scrollbar-thumb': {
           overflow: 'visible',
@@ -89,8 +89,8 @@ module.exports = plugin(
         position: 'relative',
         overflowX: 'auto',
         '&::-webkit-scrollbar': {
-          width: '6.4px',
-          height: '6.4px'
+          width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
+          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
         },
         '&::-webkit-scrollbar, &::-webkit-scrollbar-thumb': {
           overflow: 'visible',
