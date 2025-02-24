@@ -11,22 +11,6 @@ module.exports = plugin(
         '--tw-mac-scrollbar-size-w': '6.4px',
         '--tw-mac-scrollbar-size-h': '6.4px',
       },
-      '*': {
-        // 이 속성은 넣어야하는지 넣지 말아야하는지 고민중
-        boxSizing: 'border-box',
-        '&::-webkit-scrollbar': {
-          backgroundColor: 'transparent',
-          width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
-          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
-        },
-        '&::-webkit-scrollbar-track': {
-          backgroundColor: 'rgba(var(--tw-mac-scrollbar-bg), 0.6)',
-        },
-        '&::-webkit-scrollbar-thumb': {
-          backgroundColor: 'rgba(var(--tw-mac-scrollbar-text), 0.6)',
-          borderRadius: '999px'
-        }
-      },
       '@media (prefers-color-scheme: dark)': {
         ':root': {
           // '--tw-mac-scrollbar-bg': '255, 255, 255',
