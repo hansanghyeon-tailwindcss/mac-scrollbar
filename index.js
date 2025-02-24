@@ -1,7 +1,7 @@
 const plugin = require("tailwindcss/plugin")
 
 module.exports = plugin(
-	({ addComponents, addBase }) => {
+	({ addComponents, addBase, matchUtilities, theme }) => {
     // 베이스스타일로 추가하기
     addBase({
       ':root': {
@@ -35,14 +35,31 @@ module.exports = plugin(
       },
     })
 
-    // TODO:
-    // mac-scrollbar-[color]
-    // 추가할수있게 변경하기
+    // 전역 스크롤바 스타일 유틸리티
     addComponents({
+      '.mac-scrollbar-all': {
+        '*': {
+          '&::-webkit-scrollbar': {
+            width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
+            height: 'var(--tw-mac-scrollbar-size-h, 6.4px)',
+            backgroundColor: 'transparent',
+          },
+          '&::-webkit-scrollbar, &::-webkit-scrollbar-thumb': {
+            overflow: 'visible',
+            borderRadius: '4px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: 'rgba(var(--tw-mac-scrollbar-text), 0.6)',
+          },
+        }
+      },
+      
+      // 기본 mac-scrollbar 클래스
       '.mac-scrollbar': {
         '&::-webkit-scrollbar': {
           width: 'var(--tw-mac-scrollbar-size-w, 6.4px)',
-          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)'
+          height: 'var(--tw-mac-scrollbar-size-h, 6.4px)',
+          backgroundColor: 'transparent',
         },
         '&::-webkit-scrollbar, &::-webkit-scrollbar-thumb': {
           overflow: 'visible',
@@ -125,6 +142,22 @@ module.exports = plugin(
         },
       },
     })
+
+    // 색상 유틸리티
+    matchUtilities(
+      {
+        'mac-scrollbar': (value) => ({
+          '--tw-mac-scrollbar-color': value,
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: `var(--tw-mac-scrollbar-color, rgba(0,0,0,.1))`,
+          },
+        }),
+      },
+      {
+        values: theme('colors'),
+        type: ['color', 'any'],
+      }
+    );
 	},
 	{},
 )
