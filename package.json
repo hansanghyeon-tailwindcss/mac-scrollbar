@@ -1,20 +1,29 @@
 {
   "name": "tailwindcss-mac-scrollbar",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "repository": "https://github.com/Hansanghyeon/tailwindcss-mac-scrollbar",
   "author": "Hansanghyeon <999@hyeon.pro>",
   "license": "MIT",
-  "description": "A Tailwind CSS plugin for creating beautiful scroll bar",
-  "main": "index.js",
+  "description": "A Tailwind CSS v4 compatible plugin for creating beautiful Mac-style scrollbars",
+  "main": "mac-scrollbar.css",
+  "style": "mac-scrollbar.css",
   "files": [
-    "index.js"
+    "mac-scrollbar.css"
   ],
   "peerDependencies": {
-    "tailwindcss": ">=3.0.0 || insiders"
+    "tailwindcss": ">=4.0.0-alpha || >=4.0.0"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^4.0.0-alpha.5"
   },
+  "keywords": [
+    "tailwindcss",
+    "tailwindcss-v4",
+    "scrollbar",
+    "mac-scrollbar",
+    "css",
+    "ui"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"

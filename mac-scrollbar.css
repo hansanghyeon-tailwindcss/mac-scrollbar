@@ -1,0 +1,320 @@
+@layer base {
+  :root {
+    --tw-mac-scrollbar-text: 12, 12, 12;
+    --tw-mac-scrollbar-size-w: 6.4px;
+    --tw-mac-scrollbar-size-h: 6.4px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tw-mac-scrollbar-text: 173, 186, 199;
+    }
+  }
+}
+
+@layer components {
+  /* Global scrollbar styles for all elements */
+  .mac-scrollbar-all * {
+    &::-webkit-scrollbar {
+      width: var(--tw-mac-scrollbar-size-w, 6.4px);
+      height: var(--tw-mac-scrollbar-size-h, 6.4px);
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      overflow: visible;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(var(--tw-mac-scrollbar-text), 0.6);
+    }
+  }
+  
+  /* Basic mac-scrollbar class */
+  .mac-scrollbar {
+    &::-webkit-scrollbar {
+      width: var(--tw-mac-scrollbar-size-w, 6.4px);
+      height: var(--tw-mac-scrollbar-size-h, 6.4px);
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      overflow: visible;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Vertical scrollbar with animation */
+  .mac-scrollbar-y {
+    position: relative;
+    overflow-y: scroll;
+    
+    &::-webkit-scrollbar {
+      width: var(--tw-mac-scrollbar-size-w, 6.4px);
+      height: var(--tw-mac-scrollbar-size-h, 6.4px);
+    }
+    
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      overflow: visible;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: 0.4em;
+      transition: all 0.5s;
+      opacity: 1;
+    }
+    
+    &:hover::after {
+      opacity: 0;
+      transition: all 0.5s;
+    }
+  }
+  
+  /* Horizontal scrollbar with animation */
+  .mac-scrollbar-x {
+    position: relative;
+    overflow-x: auto;
+    
+    &::-webkit-scrollbar {
+      width: var(--tw-mac-scrollbar-size-w, 6.4px);
+      height: var(--tw-mac-scrollbar-size-h, 6.4px);
+    }
+    
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      overflow: visible;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 6.4px;
+      transition: all 0.5s;
+      opacity: 1;
+    }
+    
+    &:hover::after {
+      opacity: 0;
+      transition: all 0.5s;
+    }
+  }
+  
+  /* Hide scrollbar completely */
+  .scrollbar-hidden {
+    /* For IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    /* For Webkit-based browsers (Chrome, Safari and Opera) */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@layer utilities {
+  /* Color customization utilities */
+  .mac-scrollbar-slate {
+    --tw-mac-scrollbar-color: rgb(100 116 139);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-gray {
+    --tw-mac-scrollbar-color: rgb(107 114 128);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-zinc {
+    --tw-mac-scrollbar-color: rgb(113 113 122);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-neutral {
+    --tw-mac-scrollbar-color: rgb(115 115 115);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-stone {
+    --tw-mac-scrollbar-color: rgb(120 113 108);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-red {
+    --tw-mac-scrollbar-color: rgb(239 68 68);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-orange {
+    --tw-mac-scrollbar-color: rgb(249 115 22);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-amber {
+    --tw-mac-scrollbar-color: rgb(245 158 11);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-yellow {
+    --tw-mac-scrollbar-color: rgb(234 179 8);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-lime {
+    --tw-mac-scrollbar-color: rgb(132 204 22);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-green {
+    --tw-mac-scrollbar-color: rgb(34 197 94);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-emerald {
+    --tw-mac-scrollbar-color: rgb(16 185 129);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-teal {
+    --tw-mac-scrollbar-color: rgb(20 184 166);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-cyan {
+    --tw-mac-scrollbar-color: rgb(6 182 212);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-sky {
+    --tw-mac-scrollbar-color: rgb(14 165 233);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-blue {
+    --tw-mac-scrollbar-color: rgb(59 130 246);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-indigo {
+    --tw-mac-scrollbar-color: rgb(99 102 241);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-violet {
+    --tw-mac-scrollbar-color: rgb(139 92 246);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-purple {
+    --tw-mac-scrollbar-color: rgb(147 51 234);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-fuchsia {
+    --tw-mac-scrollbar-color: rgb(217 70 239);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-pink {
+    --tw-mac-scrollbar-color: rgb(236 72 153);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+  
+  .mac-scrollbar-rose {
+    --tw-mac-scrollbar-color: rgb(244 63 94);
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tw-mac-scrollbar-color);
+    }
+  }
+}
