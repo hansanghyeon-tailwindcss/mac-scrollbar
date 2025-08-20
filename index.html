@@ -7,7 +7,7 @@
   <title>Tailwind CSS Mac Scrollbar v2.0 - Demo</title>
   <!-- Note: Browser CDN is for development/demo purposes only. Use Tailwind CLI for production. -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss-mac-scrollbar@2/mac-scrollbar.css">
+  <link rel="stylesheet" href="./mac-scrollbar.css">
   <!-- Typography CSS directly via CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.15/dist/typography.css">
   <style>
@@ -165,25 +165,53 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar p-4 h-48" style="--tw-mac-scrollbar-color: rgb(255 165 0);">
-          <h4>🟠 Custom Orange (CSS Variable)</h4>
-          <p>사용자 정의 오렌지 색상</p>
-          <p>CSS 변수를 사용한 커스텀 색상 예제입니다. --tw-mac-scrollbar-color를 직접 설정했습니다.</p>
+        <div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff6500] p-4 h-48">
+          <h4>🟠 Arbitrary Value (Tailwind v4 Syntax)</h4>
+          <p>임의 값 사용: <code>[--tw-mac-scrollbar-color:#ff6500]</code></p>
+          <p>Tailwind CSS v4의 임의 값 구문을 사용한 커스텀 색상 예제입니다.</p>
           <p>인생에 보는 피어나는 있다. 눈이 없으면, 붙잡아 없으면 주며, 사막이다.</p>
           <p>그들은 그들에게 인류의 피어나기 위하여 구하기 가지에 끓는다.</p>
           <p>때에, 풀이 이것은 안고, 새 인생에 말이다. 그러므로 커다란.</p>
-          <p class="text-orange-600">Custom complete! 🧡</p>
+          <p class="text-orange-600">Arbitrary value complete! 🎯</p>
         </div>
       </div>
     </div>
 
-    <!-- Custom Size Example -->
+    <!-- Arbitrary Values Examples -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff1493] p-4 h-48">
+          <h4>💖 Deep Pink (#ff1493)</h4>
+          <p>Hex 색상 값: <code>[--tw-mac-scrollbar-color:#ff1493]</code></p>
+          <p>16진수 색상 코드를 직접 사용한 예제입니다.</p>
+          <p>끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다.</p>
+          <p>보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게.</p>
+          <p>청춘 그들의 긴지라 것이다. 풀이 바이며, 있을 인생을 황금시대를.</p>
+          <p class="text-pink-600">Deep pink complete! 💖</p>
+        </div>
+      </div>
+
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar [--tw-mac-scrollbar-color:hsl(120,100%,25%)] p-4 h-48">
+          <h4>🌲 Forest Green (HSL)</h4>
+          <p>HSL 색상 값: <code>[--tw-mac-scrollbar-color:hsl(120,100%,25%)]</code></p>
+          <p>HSL 색상 표기법을 사용한 진한 녹색 예제입니다.</p>
+          <p>황금시대다. 그러므로 끓는 인류의 이상은 사막이다.</p>
+          <p>힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향악이다.</p>
+          <p>끝에 때에, 우리의 것이다. 없는 꽃 커다란 구하지 것이다.</p>
+          <p class="text-green-800">Forest green complete! 🌲</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Combined Arbitrary Values -->
     <div class="shadow-lg bg-white rounded-lg overflow-hidden not-prose">
-      <div class="mac-scrollbar [--tw-mac-scrollbar-size-w:12px] [--tw-mac-scrollbar-size-h:12px] p-5 h-64">
-        <h3>📏 Custom Size Scrollbar (12px width/height)</h3>
-        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <p><strong>🎛️ 크기 조정</strong></p>
-          <p>--tw-mac-scrollbar-size-w: 12px, --tw-mac-scrollbar-size-h: 12px</p>
+      <div class="mac-scrollbar [--tw-mac-scrollbar-color:rgba(255,20,147,0.8)] [--tw-mac-scrollbar-size-w:10px] [--tw-mac-scrollbar-size-h:10px] p-5 h-64">
+        <h3>🎨 Combined Arbitrary Values</h3>
+        <div class="bg-pink-50 border border-pink-200 rounded-lg p-4">
+          <p><strong>🔧 다중 임의 값</strong></p>
+          <p>색상: <code>[--tw-mac-scrollbar-color:rgba(255,20,147,0.8)]</code></p>
+          <p>크기: <code>[--tw-mac-scrollbar-size-w:10px]</code>, <code>[--tw-mac-scrollbar-size-h:10px]</code></p>
         </div>
         <p class="mb-3">사용자 정의 크기의 스크롤바 예제입니다. CSS 사용자 정의 속성을 사용해 스크롤바 크기를 기본 6.4px에서 12px로 증가시켰습니다.</p>
         <p class="mb-3">끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다. 보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게 청춘 그들의 긴지라 것이다.</p>
@@ -294,7 +322,7 @@
         </div>
       </div>
 
-      <div class="mb-4">
+      <div class="mb-6">
         <h3>Available Classes</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -308,6 +336,24 @@
             <code class="bg-gray-100 px-2 py-1 rounded">.mac-scrollbar-{color}</code> - Color variants<br>
           </div>
         </div>
+      </div>
+
+      <div class="mb-4">
+        <h3>Arbitrary Values (Tailwind CSS v4)</h3>
+        <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto mac-scrollbar">
+          <pre class="max-w-full overflow-x-auto"><code>&lt;!-- Custom colors using arbitrary values --&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff6500]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:rgb(255,20,147)]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:hsl(120,100%,25%)]"&gt;...&lt;/div&gt;
+
+&lt;!-- Custom sizes --&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-size-w:12px]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-size-h:8px]"&gt;...&lt;/div&gt;
+
+&lt;!-- Combined arbitrary values --&gt;
+&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff1493] [--tw-mac-scrollbar-size-w:10px]"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+        <p class="text-gray-600 text-sm mt-2">✨ Supports any valid CSS color value: hex, rgb, rgba, hsl, hsla, named colors</p>
       </div>
 
       <p class="text-gray-600">This demo uses jsDelivr CDN to load the mac-scrollbar CSS directly from the npm package.
