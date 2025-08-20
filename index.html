@@ -10,7 +10,16 @@
   <!-- Typography CSS directly via CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.15/dist/typography.css">
   <style type="text/tailwindcss">
-    /* Additional custom styles if needed */
+    /* Code block scrolling improvements */
+    pre {
+      white-space: pre;
+      word-wrap: normal;
+    }
+    
+    /* Apply mac-scrollbar to code blocks */
+    .bg-gray-900 {
+      @apply mac-scrollbar;
+    }
   </style>
 </head>
 
@@ -269,10 +278,10 @@
       <div class="mb-6">
         <h3>Method 1: NPM Package (Production)</h3>
         <div class="bg-gray-900 text-white p-4 rounded-lg mb-2 overflow-auto">
-          <pre><code>npm install tailwindcss-mac-scrollbar</code></pre>
+          <pre class="max-w-full overflow-x-auto"><code>npm install tailwindcss-mac-scrollbar</code></pre>
         </div>
         <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-          <pre><code>/* In your app.css */
+          <pre class="max-w-full overflow-x-auto"><code>/* In your app.css */
 @import "tailwindcss";
 @import "tailwindcss-mac-scrollbar";</code></pre>
         </div>
@@ -281,7 +290,7 @@
       <div class="mb-6">
         <h3>Method 2: CDN (Quick Start)</h3>
         <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-          <pre><code>&lt;!-- Tailwind CSS v4 Browser CDN --&gt;
+          <pre class="max-w-full overflow-x-auto"><code>&lt;!-- Tailwind CSS v4 Browser CDN --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"&gt;&lt;/script&gt;
 
 &lt;!-- Mac Scrollbar CSS via jsDelivr --&gt;
