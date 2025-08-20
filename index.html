@@ -29,6 +29,12 @@
       <div class="mac-scrollbar p-5">
         <h2>Basic Mac Scrollbar (.mac-scrollbar)</h2>
         <p>🌟 기본 Mac 스타일 스크롤바입니다. 아래 내용을 스크롤해보세요!</p>
+        <div class="grid gap-2 mb-4">
+          <p><strong>새로운 기능들:</strong></p>
+          <p>• 크기 조정: mac-scrollbar-w-1~4, mac-scrollbar-h-1~4</p>
+          <p>• 확장된 색상: -dark, -light, -medium, -auto 변형</p>
+          <p>• 임의 값: [--tw-mac-scrollbar-color:#custom] 지원</p>
+        </div>
         <p>싹이 되려니와, 이상 끝에 우는 이것은 설레는 두손을 넣는 때문이다. 수 그림자는 열락의 든 사라지지 그들에게 위하여, 않는 찬미를 말이다. 인도하겠다는 같이, 설산에서 이성은 바이며, 것이다.
           그들의 따뜻한 바이며, 웅대한 꽃이 하여도 갑 곳이 피다.</p>
         <p>꽃 피어나는 그들은 피다. 산야에 아름답고 무엇을 우리 황금시대의 몸이 공자는 피어나기 얼음 철환하였는가? 청춘에서만 무엇을 하였으며, 것이다. 인생에 이상은 인생에 보는 피어나는 있다. 눈이
@@ -107,8 +113,24 @@
       </div>
     </div>
 
-    <!-- Color Examples -->
+    <!-- New Features Showcase -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
+      <!-- Size Customization -->
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar mac-scrollbar-w-3 mac-scrollbar-blue-dark p-5 h-64">
+          <h3>📏 Size & Color (.mac-scrollbar-w-3 + .mac-scrollbar-blue-dark)</h3>
+          <div class="bg-blue-50 p-3 rounded-lg mb-3">
+            <p><strong>새로운 기능:</strong> 크기 조정 가능</p>
+            <p>• w-1 (4px), w-2 (8px), w-3 (12px), w-4 (16px)</p>
+            <p>• h-1 (4px), h-2 (8px), h-3 (12px), h-4 (16px)</p>
+          </div>
+          <p>이 스크롤바는 12px 너비의 어두운 파란색입니다. v1에서 불가능했던 크기 조정이 이제 가능합니다!</p>
+          <p>끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다. 보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게 청춘 그들의 긴지라 것이다.</p>
+          <p>풀이 바이며, 있을 인생을 황금시대를 황금시대다. 그러므로 끓는 인류의 이상은 사막이다. 힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향악이다.</p>
+          <p class="text-blue-700 font-semibold">Size customization working! 📏</p>
+        </div>
+
+      <!-- Color Examples -->
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
         <div class="mac-scrollbar mac-scrollbar-blue p-5 h-64">
           <h3>🔵 Blue Scrollbar (.mac-scrollbar-blue)</h3>
@@ -117,7 +139,7 @@
           </div>
           <p>파란색 스크롤바 예제입니다. 색상이 적용된 스크롤바를 확인해보세요. 이 스크롤바는 rgb(59 130 246) 색상을 사용합니다.</p>
           <p>끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다. 보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게 청춘 그들의 긴지라 것이다.</p>
-          <p>풀이 바이며, 있을 인생을 황금시대를 황금시대다. 그러므로 끓는 인류의 이상은 사막이다. 힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향악이다.</p>
+          <p>풀이 바이며, 있을 인생을 황금시대를 황금시대다. 그러므로 끓는 인류의 이상은 사막이다. 힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향액이다.</p>
           <p>끝에 때에, 우리의 것이다. 없는 꽃 커다란 구하지 것이다. 없는 천고에 듣기만 바이며, 그들의 있으랴? 끝에 것은 싶이 것이다.</p>
           <p class="text-blue-600">Blue scrollbar complete! 💙</p>
         </div>
@@ -165,14 +187,19 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff6500] p-4 h-48">
-          <h4>🟠 Arbitrary Value (Tailwind v4 Syntax)</h4>
-          <p>임의 값 사용: <code>[--tw-mac-scrollbar-color:#ff6500]</code></p>
-          <p>Tailwind CSS v4의 임의 값 구문을 사용한 커스텀 색상 예제입니다.</p>
+        <div class="mac-scrollbar mac-scrollbar-auto mac-scrollbar-h-2 p-4 h-48">
+          <h4>⚙️ New Features (.mac-scrollbar-auto + .mac-scrollbar-h-2)</h4>
+          <p>새로운 기능들:</p>
+          <ul class="list-disc list-inside text-sm space-y-1">
+            <li><code>.mac-scrollbar-auto</code> - 테마에 맞춘 자동 색상</li>
+            <li><code>.mac-scrollbar-h-2</code> - 8px 세로 스크롤바</li>
+            <li><code>.mac-scrollbar-light/medium/dark</code> - 투명도 변형</li>
+            <li><code>.mac-scrollbar-[color]-dark</code> - 어두운 색상 변형</li>
+          </ul>
           <p>인생에 보는 피어나는 있다. 눈이 없으면, 붙잡아 없으면 주며, 사막이다.</p>
           <p>그들은 그들에게 인류의 피어나기 위하여 구하기 가지에 끓는다.</p>
-          <p>때에, 풀이 이것은 안고, 새 인생에 말이다. 그러므로 커다란.</p>
-          <p class="text-orange-600">Arbitrary value complete! 🎯</p>
+          <p>때에, 풀이 이것은 안고, 새 인생에 말이다. 그러므로 커다간.</p>
+          <p class="text-gray-600 font-semibold">New features working! ✨</p>
         </div>
       </div>
     </div>

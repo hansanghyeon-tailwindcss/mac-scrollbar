@@ -1,23 +1,4 @@
 @layer base {
-  /* CSS Custom Property registration for better support */
-  @property --tw-mac-scrollbar-color {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: rgba(0, 0, 0, 0.1);
-  }
-
-  @property --tw-mac-scrollbar-size-w {
-    syntax: "<length>";
-    inherits: true;
-    initial-value: 6.4px;
-  }
-
-  @property --tw-mac-scrollbar-size-h {
-    syntax: "<length>";
-    inherits: true;
-    initial-value: 6.4px;
-  }
-
   :root {
     --tw-mac-scrollbar-text: 12, 12, 12;
     --tw-mac-scrollbar-size-w: 6.4px;
@@ -78,7 +59,6 @@
   .mac-scrollbar-y {
     position: relative;
     overflow-y: scroll;
-    
     /* Firefox */
     scrollbar-color: var(--tw-mac-scrollbar-color, rgba(0, 0, 0, 0.1)) transparent;
     scrollbar-width: thin;
@@ -120,7 +100,6 @@
   .mac-scrollbar-x {
     position: relative;
     overflow-x: auto;
-    
     /* Firefox */
     scrollbar-color: var(--tw-mac-scrollbar-color, rgba(0, 0, 0, 0.1)) transparent;
     scrollbar-width: thin;
@@ -172,13 +151,6 @@
 }
 
 @layer utilities {
-  /* 
-   * Arbitrary value support:
-   * Use CSS custom properties directly for any color
-   * Example: <div class="mac-scrollbar" style="--tw-mac-scrollbar-color: #fff">
-   * Or with Tailwind v4: class="mac-scrollbar [--tw-mac-scrollbar-color:#fff]"
-   */
-
   /* Color customization utilities */
   .mac-scrollbar-slate {
     --tw-mac-scrollbar-color: rgb(100 116 139);

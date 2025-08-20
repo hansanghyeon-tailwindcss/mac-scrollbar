@@ -1,6 +1,13 @@
 # tailwindcss-mac-scrollbar
 
-Tailwind CSS v4 compatible plugin for creating beautiful Mac-style scrollbars.
+Tailwind CSS v4 compatible plugin for creating beautiful Mac-style scrollbars with enhanced customization features.
+
+**✨ v2.1 New Features:**
+- Size customization utilities (w-1~4, h-1~4)
+- Extended color palette with dark variants
+- Opacity control (light, medium, dark)
+- Auto theme color matching
+- Arbitrary value support with Tailwind v4 syntax
 
 - npm https://www.npmjs.com/package/tailwindcss-mac-scrollbar  
 - github https://github.com/Hansanghyeon/tailwindcss-mac-scrollbar
@@ -85,9 +92,25 @@ For quick prototyping or playground use:
 
 ## Customization
 
-### Scrollbar Size
+### Scrollbar Size (New in v2.1!)
 
-Use CSS custom properties to adjust scrollbar size:
+**Method 1: Size Utility Classes**
+
+```html
+<!-- Width: 4px, 8px, 12px, 16px -->
+<div class="mac-scrollbar mac-scrollbar-w-1">Small width</div>
+<div class="mac-scrollbar mac-scrollbar-w-2">Medium width</div>
+<div class="mac-scrollbar mac-scrollbar-w-3">Large width</div>
+<div class="mac-scrollbar mac-scrollbar-w-4">Extra large width</div>
+
+<!-- Height: 4px, 8px, 12px, 16px -->
+<div class="mac-scrollbar mac-scrollbar-h-1">Small height</div>
+<div class="mac-scrollbar mac-scrollbar-h-2">Medium height</div>
+<div class="mac-scrollbar mac-scrollbar-h-3">Large height</div>
+<div class="mac-scrollbar mac-scrollbar-h-4">Extra large height</div>
+```
+
+**Method 2: CSS Custom Properties**
 
 ```html
 <div class="mac-scrollbar [--tw-mac-scrollbar-size-w:8px] [--tw-mac-scrollbar-size-h:8px]">
@@ -95,25 +118,51 @@ Use CSS custom properties to adjust scrollbar size:
 </div>
 ```
 
-### Scrollbar Colors
+### Scrollbar Colors (Enhanced in v2.1!)
 
-Use predefined color classes:
-
+**Basic Colors:**
 ```html
 <div class="mac-scrollbar mac-scrollbar-blue">Blue scrollbar</div>
 <div class="mac-scrollbar mac-scrollbar-red">Red scrollbar</div>
 <div class="mac-scrollbar mac-scrollbar-green">Green scrollbar</div>
 ```
 
+**Dark Variants (New!):**
+```html
+<div class="mac-scrollbar mac-scrollbar-blue-dark">Dark blue</div>
+<div class="mac-scrollbar mac-scrollbar-gray-dark">Dark gray</div>
+<div class="mac-scrollbar mac-scrollbar-green-dark">Dark green</div>
+<div class="mac-scrollbar mac-scrollbar-red-dark">Dark red</div>
+```
+
+**Opacity Variants (New!):**
+```html
+<div class="mac-scrollbar mac-scrollbar-light">Light opacity</div>
+<div class="mac-scrollbar mac-scrollbar-medium">Medium opacity</div>
+<div class="mac-scrollbar mac-scrollbar-dark">Dark opacity</div>
+```
+
+**Special Variants (New!):**
+```html
+<div class="mac-scrollbar mac-scrollbar-auto">Auto theme color</div>
+<div class="mac-scrollbar mac-scrollbar-transparent">Transparent</div>
+```
+
 Available colors: `slate`, `gray`, `zinc`, `neutral`, `stone`, `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `emerald`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`, `purple`, `fuchsia`, `pink`, `rose`
 
-### Custom Colors
+### Custom Colors & Arbitrary Values
 
-Define your own colors using CSS custom properties:
-
+**Method 1: CSS Custom Properties**
 ```html
 <div class="mac-scrollbar" style="--tw-mac-scrollbar-color: rgb(255 0 128);">
   <!-- Custom color scrollbar -->
+</div>
+```
+
+**Method 2: Tailwind v4 Arbitrary Values**
+```html
+<div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff6500]">
+  <!-- Arbitrary value with Tailwind v4 syntax -->
 </div>
 ```
 
@@ -142,6 +191,12 @@ If you're upgrading from v1.x (Tailwind CSS v3), you need to:
 | `.mac-scrollbar-all` | Apply to all child elements |
 | `.scrollbar-hidden` | Hide scrollbar completely |
 | `.mac-scrollbar-{color}` | Colored scrollbar variants |
+| `.mac-scrollbar-{color}-dark` | Dark color variants (v2.1+) |
+| `.mac-scrollbar-light/medium/dark` | Opacity variants (v2.1+) |
+| `.mac-scrollbar-auto` | Auto theme color (v2.1+) |
+| `.mac-scrollbar-transparent` | Transparent scrollbar (v2.1+) |
+| `.mac-scrollbar-w-{1-4}` | Width sizing (4px-16px) (v2.1+) |
+| `.mac-scrollbar-h-{1-4}` | Height sizing (4px-16px) (v2.1+) |
 
 ## CSS Custom Properties
 
