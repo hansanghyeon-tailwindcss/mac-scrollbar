@@ -5,11 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwind CSS Mac Scrollbar v2.0 - Demo</title>
-  <!-- Note: Browser CDN is for development/demo purposes only. Use Tailwind CLI for production. -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="./mac-scrollbar.css">
-  <!-- Typography CSS directly via CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.15/dist/typography.css">
+  <link rel="stylesheet" href="./assets/demo.css">
   <style>
     /* Code block scrolling improvements */
     pre {
@@ -25,15 +21,15 @@
     <p class="text-center text-gray-600">Compatible with Tailwind CSS v4 - CSS-first approach</p>
 
     <!-- Basic Mac Scrollbar -->
-    <div class="scroll-bar-wrap shadow-lg bg-white rounded-lg overflow-hidden not-prose">
-      <div class="mac-scrollbar p-5">
+    <div class="scroll-bar-wrap shadow-lg bg-white rounded-lg overflow-hidden not-prose mac-scrollbar">
+      <div class="p-5">
         <h2>Basic Mac Scrollbar (.mac-scrollbar)</h2>
         <p>🌟 기본 Mac 스타일 스크롤바입니다. 아래 내용을 스크롤해보세요!</p>
         <div class="grid gap-2 mb-4">
           <p><strong>새로운 기능들:</strong></p>
-          <p>• 크기 조정: mac-scrollbar-w-1~4, mac-scrollbar-h-1~4</p>
-          <p>• 확장된 색상: -dark, -light, -medium, -auto 변형</p>
-          <p>• 임의 값: [--tw-mac-scrollbar-color:#custom] 지원</p>
+          <p>• 동적 클래스: mac-scrollbar-color-[#custom]</p>
+          <p>• 크기 클래스: mac-scrollbar-w-[12px], mac-scrollbar-h-[10px]</p>
+          <p>• y/x 전용 클래스: .mac-scrollbar-y / .mac-scrollbar-x</p>
         </div>
         <p>싹이 되려니와, 이상 끝에 우는 이것은 설레는 두손을 넣는 때문이다. 수 그림자는 열락의 든 사라지지 그들에게 위하여, 않는 찬미를 말이다. 인도하겠다는 같이, 설산에서 이성은 바이며, 것이다.
           그들의 따뜻한 바이며, 웅대한 꽃이 하여도 갑 곳이 피다.</p>
@@ -68,8 +64,8 @@
     </div>
 
     <!-- Vertical Scrollbar with Animation -->
-    <div class="scroll-bar-wrap shadow-lg bg-white rounded-lg overflow-hidden not-prose">
-      <div class="mac-scrollbar-y p-5">
+    <div class="scroll-bar-wrap shadow-lg bg-white rounded-lg overflow-hidden not-prose mac-scrollbar-y">
+      <div class="p-5">
         <h2>Vertical Scrollbar with Animation (.mac-scrollbar-y)</h2>
         <p>✨ 호버 시 애니메이션이 있는 세로 스크롤바입니다. 오른쪽에 마우스를 올려보세요!</p>
         <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
@@ -102,8 +98,8 @@
     </div>
 
     <!-- Horizontal Scrollbar with Animation -->
-    <div class="scroll-bar-wrap-horizontal shadow-lg bg-white rounded-lg overflow-hidden not-prose">
-      <div class="mac-scrollbar-x p-5">
+    <div class="scroll-bar-wrap-horizontal shadow-lg bg-white rounded-lg overflow-hidden not-prose mac-scrollbar-x">
+      <div class="p-5">
         <h2>Horizontal Scrollbar with Animation (.mac-scrollbar-x)</h2>
         <p style="white-space: nowrap; width: 600px;">이것은 가로 스크롤을 테스트하기 위한 긴 텍스트입니다. 가로 스크롤바가 나타나고 호버 시 애니메이션이 동작하는지
           확인해보세요.</p>
@@ -115,16 +111,16 @@
 
     <!-- New Features Showcase -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
-      <!-- Size Customization -->
+      <!-- Size & Color Customization -->
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-w-3 mac-scrollbar-blue-dark p-5 h-64">
-          <h3>📏 Size & Color (.mac-scrollbar-w-3 + .mac-scrollbar-blue-dark)</h3>
+        <div class="mac-scrollbar mac-scrollbar-w-[12px] mac-scrollbar-color-[#1d4ed8] p-5 h-64 overflow-auto">
+          <h3>📏 Size & Color (mac-scrollbar-w-[12px] + mac-scrollbar-color-[#1d4ed8])</h3>
           <div class="bg-blue-50 p-3 rounded-lg mb-3">
-            <p><strong>새로운 기능:</strong> 크기 조정 가능</p>
-            <p>• w-1 (4px), w-2 (8px), w-3 (12px), w-4 (16px)</p>
-            <p>• h-1 (4px), h-2 (8px), h-3 (12px), h-4 (16px)</p>
+            <p><strong>임의값으로 사이즈 지정:</strong></p>
+            <p>• mac-scrollbar-w-[&lt;length&gt;]</p>
+            <p>• mac-scrollbar-h-[&lt;length&gt;]</p>
           </div>
-          <p>이 스크롤바는 12px 너비의 어두운 파란색입니다. v1에서 불가능했던 크기 조정이 이제 가능합니다!</p>
+          <p>이 스크롤바는 12px 너비의 파란색(#1d4ed8)으로 설정했습니다. 임의값으로 자유롭게 변경 가능합니다.</p>
           <p>끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다. 보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게 청춘 그들의 긴지라 것이다.</p>
           <p>풀이 바이며, 있을 인생을 황금시대를 황금시대다. 그러므로 끓는 인류의 이상은 사막이다. 힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향악이다.</p>
           <p class="text-blue-700 font-semibold">Size customization working! 📏</p>
@@ -132,8 +128,8 @@
 
       <!-- Color Examples -->
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-blue p-5 h-64">
-          <h3>🔵 Blue Scrollbar (.mac-scrollbar-blue)</h3>
+        <div class="mac-scrollbar mac-scrollbar-color-sky-500 p-5 h-64 overflow-auto">
+          <h3>🔵 Blue Scrollbar (mac-scrollbar-color-sky-500)</h3>
           <div class="bg-blue-50 p-3 rounded-lg">
             <p>파란색 스크롤바는 신뢰감과 전문성을 나타냅니다.</p>
           </div>
@@ -146,8 +142,8 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-red p-5 h-64">
-          <h3>🔴 Red Scrollbar (.mac-scrollbar-red)</h3>
+        <div class="mac-scrollbar mac-scrollbar-color-rose-500 p-5 h-64 overflow-auto">
+          <h3>🔴 Red Scrollbar (mac-scrollbar-color-rose-500)</h3>
           <div class="bg-red-50 p-3 rounded-lg">
             <p>빨간색 스크롤바는 중요성과 긴급함을 강조합니다.</p>
           </div>
@@ -163,8 +159,8 @@
     <!-- Additional Color Examples -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose">
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-green p-4 h-48">
-          <h4>🟢 Green (.mac-scrollbar-green)</h4>
+        <div class="mac-scrollbar mac-scrollbar-color-emerald-500 p-4 h-48 overflow-auto">
+          <h4>🟢 Green (mac-scrollbar-color-emerald-500)</h4>
           <p>친환경적이고 긍정적인 느낌</p>
           <p>새싹처럼 생기있는 녹색 스크롤바입니다. 성장과 자연을 상징하는 색상으로 사용자에게 안정감을 줍니다.</p>
           <p>싹이 되려니와, 이상 끝에 우는 이것은 설레는 두손을 넣는 때문이다.</p>
@@ -175,8 +171,8 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-purple p-4 h-48">
-          <h4>🟣 Purple (.mac-scrollbar-purple)</h4>
+        <div class="mac-scrollbar mac-scrollbar-color-[#a855f7] p-4 h-48 overflow-auto">
+          <h4>🟣 Purple (mac-scrollbar-color-[#a855f7])</h4>
           <p>창의적이고 우아한 느낌</p>
           <p>고급스러운 보라색 스크롤바입니다. 창의성과 신비로움을 나타내는 색상입니다.</p>
           <p>웅대한 꽃이 하여도 갑 곳이 피다. 꽃 피어나는 그들은 피다.</p>
@@ -187,14 +183,12 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar mac-scrollbar-auto mac-scrollbar-h-2 p-4 h-48">
-          <h4>⚙️ New Features (.mac-scrollbar-auto + .mac-scrollbar-h-2)</h4>
-          <p>새로운 기능들:</p>
+        <div class="mac-scrollbar mac-scrollbar-h-[8px] mac-scrollbar-color-[rgba(var(--tw-mac-scrollbar-text),0.6)] p-4 h-48 overflow-auto">
+          <h4>⚙️ New Features (mac-scrollbar-h-[8px])</h4>
+          <p>임의값 예시:</p>
           <ul class="list-disc list-inside text-sm space-y-1">
-            <li><code>.mac-scrollbar-auto</code> - 테마에 맞춘 자동 색상</li>
-            <li><code>.mac-scrollbar-h-2</code> - 8px 세로 스크롤바</li>
-            <li><code>.mac-scrollbar-light/medium/dark</code> - 투명도 변형</li>
-            <li><code>.mac-scrollbar-[color]-dark</code> - 어두운 색상 변형</li>
+            <li><code>mac-scrollbar-h-[8px]</code> - 8px 세로 스크롤바</li>
+            <li><code>mac-scrollbar-color-[rgba(var(--tw-mac-scrollbar-text),0.6)]</code> - 테마 색상 자동 매칭</li>
           </ul>
           <p>인생에 보는 피어나는 있다. 눈이 없으면, 붙잡아 없으면 주며, 사막이다.</p>
           <p>그들은 그들에게 인류의 피어나기 위하여 구하기 가지에 끓는다.</p>
@@ -204,12 +198,45 @@
       </div>
     </div>
 
+    <!-- Tailwind Theme Color Tokens -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose">
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar mac-scrollbar-color-sky-500 p-4 h-48 overflow-auto">
+          <h4>🌊 Sky 500 (theme token)</h4>
+          <p>mac-scrollbar-color-sky-500</p>
+          <p>Tailwind 기본 색상 토큰을 그대로 사용한 예시입니다.</p>
+          <p>길이를 늘려 스크롤을 유도합니다. 하늘색은 안정감을 주는 색상입니다.</p>
+          <p>하늘을 닮은 색상으로 긴 콘텐츠를 읽어보세요.</p>
+        </div>
+      </div>
+
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar mac-scrollbar-color-rose-500 p-4 h-48 overflow-auto">
+          <h4>🌹 Rose 500 (theme token)</h4>
+          <p>mac-scrollbar-color-rose-500</p>
+          <p>테마 색상 토큰이 정상적으로 매핑되는지 확인하세요.</p>
+          <p>장미빛 텍스트가 한 줄 더 추가되어 스크롤바가 나타납니다.</p>
+          <p>감성을 더해주는 장미색 스크롤바입니다.</p>
+        </div>
+      </div>
+
+      <div class="shadow-lg bg-white rounded-lg overflow-hidden">
+        <div class="mac-scrollbar mac-scrollbar-color-amber-500 p-4 h-48 overflow-auto">
+          <h4>🌟 Amber 500 (theme token)</h4>
+          <p>mac-scrollbar-color-amber-500</p>
+          <p>토큰 기반 색상도 임의값 클래스처럼 적용됩니다.</p>
+          <p>노란빛 앰버 컬러로 스크롤 콘텐츠를 강조합니다.</p>
+          <p>조금 더 긴 텍스트를 넣어 스크롤 상태를 확인해보세요.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Arbitrary Values Examples -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff1493] p-4 h-48">
-          <h4>💖 Deep Pink (#ff1493)</h4>
-          <p>Hex 색상 값: <code>[--tw-mac-scrollbar-color:#ff1493]</code></p>
+        <div class="mac-scrollbar mac-scrollbar-color-[#ff1493] p-4 h-48 overflow-auto">
+          <h4>💖 Deep Pink (mac-scrollbar-color-[#ff1493])</h4>
+          <p>Hex 색상 값: <code>mac-scrollbar-color-[#ff1493]</code></p>
           <p>16진수 색상 코드를 직접 사용한 예제입니다.</p>
           <p>끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다.</p>
           <p>보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게.</p>
@@ -219,9 +246,9 @@
       </div>
 
       <div class="shadow-lg bg-white rounded-lg overflow-hidden">
-        <div class="mac-scrollbar [--tw-mac-scrollbar-color:hsl(120,100%,25%)] p-4 h-48">
-          <h4>🌲 Forest Green (HSL)</h4>
-          <p>HSL 색상 값: <code>[--tw-mac-scrollbar-color:hsl(120,100%,25%)]</code></p>
+        <div class="mac-scrollbar mac-scrollbar-color-[hsl(120,100%,25%)] p-4 h-48 overflow-auto">
+          <h4>🌲 Forest Green (mac-scrollbar-color-[hsl(120,100%,25%)])</h4>
+          <p>HSL 색상 값: <code>mac-scrollbar-color-[hsl(120,100%,25%)]</code></p>
           <p>HSL 색상 표기법을 사용한 진한 녹색 예제입니다.</p>
           <p>황금시대다. 그러므로 끓는 인류의 이상은 사막이다.</p>
           <p>힘차게 온갖 끝까지 방황하였으며, 스며들어 구할 교향악이다.</p>
@@ -233,12 +260,12 @@
 
     <!-- Combined Arbitrary Values -->
     <div class="shadow-lg bg-white rounded-lg overflow-hidden not-prose">
-      <div class="mac-scrollbar [--tw-mac-scrollbar-color:rgba(255,20,147,0.8)] [--tw-mac-scrollbar-size-w:10px] [--tw-mac-scrollbar-size-h:10px] p-5 h-64">
+      <div class="mac-scrollbar mac-scrollbar-color-[rgba(255,20,147,0.8)] mac-scrollbar-w-[10px] mac-scrollbar-h-[10px] p-5 h-64 overflow-auto">
         <h3>🎨 Combined Arbitrary Values</h3>
         <div class="bg-pink-50 border border-pink-200 rounded-lg p-4">
           <p><strong>🔧 다중 임의 값</strong></p>
-          <p>색상: <code>[--tw-mac-scrollbar-color:rgba(255,20,147,0.8)]</code></p>
-          <p>크기: <code>[--tw-mac-scrollbar-size-w:10px]</code>, <code>[--tw-mac-scrollbar-size-h:10px]</code></p>
+          <p>색상: <code>mac-scrollbar-color-[rgba(255,20,147,0.8)]</code></p>
+          <p>크기: <code>mac-scrollbar-w-[10px]</code>, <code>mac-scrollbar-h-[10px]</code></p>
         </div>
         <p class="mb-3">사용자 정의 크기의 스크롤바 예제입니다. CSS 사용자 정의 속성을 사용해 스크롤바 크기를 기본 6.4px에서 12px로 증가시켰습니다.</p>
         <p class="mb-3">끓는 시들어 낙원을 바로 들어 찬미를 위하여 이것이다. 보내는 있으며, 속에서 오직 쓸쓸하랴? 모래뿐일 동력은 현저하게 청춘 그들의 긴지라 것이다.</p>
@@ -247,7 +274,7 @@
         <p class="mb-3">붙잡아 이 그와 돋고, 생명을 이상, 칼이다. 할지라도 행복스럽고 가슴에 우리 기관과 인간이 끓는다. 고행을 얼마나 이상 같은 것이다.</p>
         <div class="bg-gray-100 p-3 rounded-lg mb-3">
           <code class="text-sm">
-            &lt;div class="mac-scrollbar [--tw-mac-scrollbar-size-w:12px] [--tw-mac-scrollbar-size-h:12px]"&gt;<br>
+            &lt;div class="mac-scrollbar mac-scrollbar-w-[12px] mac-scrollbar-h-[12px]"&gt;<br>
             &nbsp;&nbsp;<!-- 큰 스크롤바 콘텐츠 --><br>
             &lt;/div&gt;
           </code>
@@ -260,7 +287,7 @@
     <div class="shadow-lg bg-white rounded-lg overflow-hidden not-prose mac-scrollbar-all">
       <div class="p-5">
         <h3>👨‍👩‍👧‍👦 Apply to All Children (.mac-scrollbar-all)</h3>
-        <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+        <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
           <p><strong>🔄 자동 적용</strong></p>
           <p>이 컨테이너는 모든 자식 요소에 mac-scrollbar를 자동으로 적용합니다.</p>
         </div>
@@ -323,29 +350,27 @@
     </div>
 
     <!-- Usage Instructions -->
-    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 not-prose overflow-hidden>
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 not-prose overflow-hidden col-span-1 md:col-span-2">
       <h2>Usage Instructions</h2>
 
       <div class="mb-6">
-        <h3>Method 1: NPM Package (Production)</h3>
+        <h3>Method 1: Tailwind v4 Plugin</h3>
         <div class="bg-gray-900 text-white p-4 rounded-lg mb-2 overflow-auto mac-scrollbar">
           <pre class="max-w-full overflow-x-auto"><code>npm install tailwindcss-mac-scrollbar</code></pre>
         </div>
         <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto mac-scrollbar">
           <pre class="max-w-full overflow-x-auto"><code>/* In your app.css */
 @import "tailwindcss";
-@import "tailwindcss-mac-scrollbar";</code></pre>
+@plugin "tailwindcss-mac-scrollbar/plugin";</code></pre>
         </div>
       </div>
 
       <div class="mb-6">
-        <h3>Method 2: CDN (Quick Start)</h3>
+        <h3>Method 2: CSS Import (Static)</h3>
         <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto mac-scrollbar">
-          <pre class="max-w-full overflow-x-auto"><code>&lt;!-- Tailwind CSS v4 Browser CDN --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"&gt;&lt;/script&gt;
-
-&lt;!-- Mac Scrollbar CSS via jsDelivr --&gt;
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss-mac-scrollbar@2/mac-scrollbar.css"&gt;</code></pre>
+          <pre class="max-w-full overflow-x-auto"><code>/* In your app.css */
+@import "tailwindcss";
+@import "tailwindcss-mac-scrollbar";</code></pre>
         </div>
       </div>
 
@@ -360,7 +385,9 @@
           <div>
             <code class="bg-gray-100 px-2 py-1 rounded">.mac-scrollbar-all</code> - Apply to all children<br>
             <code class="bg-gray-100 px-2 py-1 rounded">.scrollbar-hidden</code> - Hide scrollbar<br>
-            <code class="bg-gray-100 px-2 py-1 rounded">.mac-scrollbar-{color}</code> - Color variants<br>
+            <code class="bg-gray-100 px-2 py-1 rounded">mac-scrollbar-color-[...]</code> - Color<br>
+            <code class="bg-gray-100 px-2 py-1 rounded">mac-scrollbar-w-[...]</code> - Width<br>
+            <code class="bg-gray-100 px-2 py-1 rounded">mac-scrollbar-h-[...]</code> - Height<br>
           </div>
         </div>
       </div>
@@ -369,16 +396,16 @@
         <h3>Arbitrary Values (Tailwind CSS v4)</h3>
         <div class="bg-gray-900 text-white p-4 rounded-lg overflow-auto mac-scrollbar">
           <pre class="max-w-full overflow-x-auto"><code>&lt;!-- Custom colors using arbitrary values --&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff6500]"&gt;...&lt;/div&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:rgb(255,20,147)]"&gt;...&lt;/div&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:hsl(120,100%,25%)]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar mac-scrollbar-color-[#ff6500]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar mac-scrollbar-color-[rgb(255,20,147)]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar mac-scrollbar-color-[hsl(120,100%,25%)]"&gt;...&lt;/div&gt;
 
 &lt;!-- Custom sizes --&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-size-w:12px]"&gt;...&lt;/div&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-size-h:8px]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar mac-scrollbar-w-[12px]"&gt;...&lt;/div&gt;
+&lt;div class="mac-scrollbar mac-scrollbar-h-[8px]"&gt;...&lt;/div&gt;
 
 &lt;!-- Combined arbitrary values --&gt;
-&lt;div class="mac-scrollbar [--tw-mac-scrollbar-color:#ff1493] [--tw-mac-scrollbar-size-w:10px]"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="mac-scrollbar mac-scrollbar-color-[#ff1493] mac-scrollbar-w-[10px]"&gt;...&lt;/div&gt;</code></pre>
         </div>
         <p class="text-gray-600 text-sm mt-2">✨ Supports any valid CSS color value: hex, rgb, rgba, hsl, hsla, named colors</p>
       </div>

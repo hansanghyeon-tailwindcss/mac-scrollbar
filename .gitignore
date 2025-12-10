@@ -1,2 +1,12 @@
 node_modules
 *.log
+
+# 개인화
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.vscode
+.justfile*
+*.http
+.geminiignore
+secondbrain
